@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Flyhigh | Celestial Systems</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "inverse-primary": "#b90068",
+                        "primary-fixed-dim": "#ffb0ca",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#00363a",
+                        "on-tertiary-container": "#008f99",
+                        "on-primary-fixed-variant": "#8d004e",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "primary": "#ffb0ca",
+                        "primary-fixed": "#ffd9e3",
+                        "surface-variant": "#313441",
+                        "tertiary-container": "#001c1e",
+                        "on-secondary-fixed": "#111c2d",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "inverse-surface": "#dfe2f2",
+                        "on-surface-variant": "#c6c6cc",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#aeb9d0",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#313441",
+                        "on-primary-fixed": "#3e001f",
+                        "outline": "#909096",
+                        "secondary-container": "#3e495d",
+                        "secondary": "#bcc7de",
+                        "outline-variant": "#45464c",
+                        "inverse-on-surface": "#2c303c",
+                        "surface-container-high": "#262a36",
+                        "on-tertiary-fixed": "#002022",
+                        "surface-container": "#1b1f2b",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "tertiary": "#00dbe9",
+                        "on-surface": "#dfe2f2",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-background": "#dfe2f2",
+                        "on-primary": "#640036",
+                        "tertiary-fixed": "#7df4ff",
+                        "surface-dim": "#0f131e",
+                        "surface": "#0f131e",
+                        "surface-tint": "#ffb0ca",
+                        "background": "#0f131e",
+                        "on-secondary": "#263143",
+                        "surface-container-lowest": "#0a0e19",
+                        "primary-container": "#38001c",
+                        "surface-bright": "#353945",
+                        "on-primary-container": "#f8048e",
+                        "surface-container-low": "#171b27"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-panel {
+            background: rgba(49, 52, 65, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(53, 57, 69, 0.2);
+        }
+
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(255, 176, 202, 0.3);
+        }
+
+        .neon-glow-tertiary {
+            box-shadow: 0 0 20px rgba(0, 219, 233, 0.3);
+        }
+
+        .gradient-button {
+            background: linear-gradient(45deg, #ffb0ca, #f8048e);
+        }
+
+        .void-shadow {
+            box-shadow: 0 20px 40px -10px rgba(62, 0, 31, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#dfe2f2] font-headline">
+                Flyhigh
+            </div>
+            <div class="hidden md:flex items-center space-x-10 font-headline tracking-tight">
+                <a class="text-[#dfe2f2]/70 hover:text-[#ffb0ca] transition-colors" href="#">Missions</a>
+                <a class="text-[#dfe2f2]/70 hover:text-[#ffb0ca] transition-colors" href="#">Technology</a>
+                <a class="text-[#dfe2f2]/70 hover:text-[#ffb0ca] transition-colors" href="#">Fleet</a>
+                <a class="text-[#dfe2f2]/70 hover:text-[#ffb0ca] transition-colors" href="#">Pricing</a>
+            </div>
+            <div class="flex items-center">
+                <button
+                    class="gradient-button text-on-primary px-6 py-2.5 rounded-md font-label font-bold text-sm hover:opacity-80 transition-opacity duration-300 scale-95 hover:scale-100 ease-in-out">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-40 mix-blend-lighten"
+                    data-alt="cinematic view of planet earth from orbital space station at sunrise with deep blue shadows and glowing atmosphere edge"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHFtsDcVe0yCcpGWU-tjQb7XDYY9tDNSwUs64_eE9ficf6W0ffipGqUUnKYZBTm34Rz2ND1ZRQRc7m92lZmo7TqonBIwOV5pOgKpxZvNy1sEBIIZnHaP8LbnIP_wr-dqvmau1uik4y6Xwchab7CW1Je-YCrb7bAduzYWFdtKxNbqMHXEuOhcujWndZUIC8t4JDRMrtEBMu4GOfNVd_TnPGkwZqpQuMDDXnZFFlYdA7_o5lb-mkKCmmeYzyrku0uDG3Za7InrMfgo-" />
+                <div class="absolute inset-0 bg-gradient-to-b from-background/10 via-background/80 to-background"></div>
+            </div>
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <span
+                        class="inline-block text-tertiary font-label text-sm uppercase tracking-[0.3em] mb-6 animate-pulse">Establishing
+                        Orbit</span>
+                    <h1 class="font-headline font-bold text-[5rem] leading-[0.9] tracking-tighter text-[#dfe2f2] mb-8">
+                        Sky's No Longer <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">the
+                            Limit</span>
+                    </h1>
+                    <p class="text-lg text-on-surface-variant max-w-2xl mb-12 font-light leading-relaxed">
+                        The next generation of celestial infrastructure is here. Orchestrate complex orbital maneuvers
+                        and starship logistics with the precision of a mission-critical command center.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <button
+                            class="gradient-button neon-glow-primary text-on-primary px-10 py-4 rounded-md font-label font-bold tracking-wide transition-all hover:brightness-110 active:scale-95">
+                            Get Started
+                        </button>
+                        <button
+                            class="bg-surface-container-high text-primary px-10 py-4 rounded-md font-label font-bold tracking-wide hover:bg-surface-container-highest transition-colors">
+                            Explore Fleet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Grid -->
+        <section class="py-32 bg-surface-container-low relative">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline text-4xl font-bold text-[#dfe2f2] mb-4">Precision Primitives</h2>
+                        <p class="text-on-surface-variant">Engineered for the infinite void, our tools provide
+                            unparalleled telemetry and logistics control.</p>
+                    </div>
+                    <div class="h-[1px] flex-grow bg-outline-variant/15 mx-12 hidden lg:block"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="group p-8 rounded-xl bg-surface-container transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden border border-outline-variant/10">
+                        <div
+                            class="mb-12 inline-flex items-center justify-center w-14 h-14 rounded-lg bg-tertiary-container text-tertiary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="rocket_launch">rocket_launch</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Quantum Telemetry</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Real-time data streaming across light-years
+                            with zero latency degradation using entangled link nodes.</p>
+                        <div class="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span class="material-symbols-outlined text-[10rem]"
+                                data-icon="query_stats">query_stats</span>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="group p-8 rounded-xl bg-surface-container transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden border border-outline-variant/10">
+                        <div
+                            class="mb-12 inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary-container text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl" data-icon="orbit">orbit</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Orbit Management</h3>
+                        <p class="text-on-surface-variant leading-relaxed">AI-driven debris avoidance and trajectory
+                            optimization for high-density traffic corridors.</p>
+                        <div class="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span class="material-symbols-outlined text-[10rem]"
+                                data-icon="all_inclusive">all_inclusive</span>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="group p-8 rounded-xl bg-surface-container transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden border border-outline-variant/10">
+                        <div
+                            class="mb-12 inline-flex items-center justify-center w-14 h-14 rounded-lg bg-surface-container-highest text-secondary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="conveyor_belt">conveyor_belt</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Starship Logistics</h3>
+                        <p class="text-on-surface-variant leading-relaxed">End-to-end cargo manifest tracking from lunar
+                            colonies to deep space fabrication outposts.</p>
+                        <div class="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span class="material-symbols-outlined text-[10rem]"
+                                data-icon="inventory_2">inventory_2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="py-32 bg-surface">
+            <div class="container mx-auto px-8">
+                <div class="text-center mb-20">
+                    <h2 class="font-headline text-5xl font-bold text-[#dfe2f2] mb-6">Celestial Access</h2>
+                    <p class="text-on-surface-variant max-w-xl mx-auto">Flexible operational tiers designed for everyone
+                        from independent prospectors to planetary governments.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                    <!-- Lite Tier -->
+                    <div class="glass-panel p-10 rounded-xl flex flex-col hover:border-outline/30 transition-all">
+                        <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Discovery
+                        </div>
+                        <h3 class="font-headline text-3xl font-bold text-on-surface mb-6">Lite</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold">$99</span>
+                            <span class="text-on-surface-variant ml-2">/ lunar cycle</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                Single Orbit Vector
+                            </li>
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                Basic Telemetry
+                            </li>
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                10TB Data Stream
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3 bg-surface-container-highest text-on-surface font-bold rounded-md hover:bg-surface-bright transition-colors">Initialize</button>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div
+                        class="glass-panel p-10 rounded-xl flex flex-col border-primary/30 relative void-shadow transform lg:-translate-y-4">
+                        <div
+                            class="absolute top-0 right-10 -translate-y-1/2 bg-primary text-on-primary px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
+                            Standard Ops</div>
+                        <div class="font-label text-xs uppercase tracking-widest text-primary mb-4">Command</div>
+                        <h3 class="font-headline text-3xl font-bold text-on-surface mb-6">Pro</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold text-primary">$499</span>
+                            <span class="text-on-surface-variant ml-2">/ lunar cycle</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center text-on-surface">
+                                <span class="material-symbols-outlined text-sm mr-3 text-primary"
+                                    data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Multi-Orbit Vectors
+                            </li>
+                            <li class="flex items-center text-on-surface">
+                                <span class="material-symbols-outlined text-sm mr-3 text-primary"
+                                    data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Real-time AI Navigation
+                            </li>
+                            <li class="flex items-center text-on-surface">
+                                <span class="material-symbols-outlined text-sm mr-3 text-primary"
+                                    data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Unlimited Telemetry
+                            </li>
+                            <li class="flex items-center text-on-surface">
+                                <span class="material-symbols-outlined text-sm mr-3 text-primary"
+                                    data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Starship Fleet Sync
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-4 gradient-button text-on-primary font-bold rounded-md hover:opacity-90 neon-glow-primary transition-all">Launch
+                            Enterprise</button>
+                    </div>
+                    <!-- Galactic Tier -->
+                    <div class="glass-panel p-10 rounded-xl flex flex-col hover:border-outline/30 transition-all">
+                        <div class="font-label text-xs uppercase tracking-widest text-tertiary mb-4">Imperial</div>
+                        <h3 class="font-headline text-3xl font-bold text-on-surface mb-6">Galactic</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold">$2,499</span>
+                            <span class="text-on-surface-variant ml-2">/ lunar cycle</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                Custom Star-Gate Protocols
+                            </li>
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                Planetary Governance Access
+                            </li>
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                Quantum Encryption Keys
+                            </li>
+                            <li class="flex items-center text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm mr-3 text-tertiary"
+                                    data-icon="check">check</span>
+                                White-glove Support
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3 bg-tertiary-container text-tertiary font-bold rounded-md hover:bg-tertiary-container/80 transition-colors">Contact
+                            Admiralty</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter / CTA -->
+        <section class="py-24 px-8">
+            <div class="max-w-6xl mx-auto glass-panel p-16 rounded-2xl relative overflow-hidden group">
+                <div
+                    class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 blur-[100px] rounded-full group-hover:bg-primary/20 transition-all duration-1000">
+                </div>
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="font-headline text-4xl font-bold text-on-surface mb-4">Secure Your Transmission</h2>
+                        <p class="text-on-surface-variant">Join 50,000+ commanders receiving the latest in orbital
+                            technology and mission updates.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <input
+                            class="bg-surface-container-high border-none rounded-md px-6 py-4 flex-grow focus:ring-2 focus:ring-tertiary transition-all placeholder:text-on-surface-variant/40"
+                            placeholder="commander@fleet.orbit" type="email" />
+                        <button
+                            class="bg-tertiary text-on-tertiary px-8 py-4 rounded-md font-bold hover:brightness-110 transition-all">Join</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#171b27] border-t border-[#45464c]/15">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+            <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+                <div class="text-lg font-black text-[#dfe2f2] font-headline mb-4 uppercase tracking-tighter">Flyhigh
+                </div>
+                <p class="text-[#dfe2f2]/50 font-label text-sm uppercase tracking-widest">© 2024 Flyhigh Celestial
+                    Systems. All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12 font-label text-sm uppercase tracking-widest">
+                <a class="text-[#dfe2f2]/50 hover:text-[#00dbe9] transition-colors" href="#">Privacy Policy</a>
+                <a class="text-[#dfe2f2]/50 hover:text-[#00dbe9] transition-colors" href="#">Terms of Orbit</a>
+                <a class="text-[#dfe2f2]/50 hover:text-[#00dbe9] transition-colors" href="#">Telemetry</a>
+                <a class="text-[#dfe2f2]/50 hover:text-[#00dbe9] transition-colors" href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
